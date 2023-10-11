@@ -1,6 +1,5 @@
 name: sanukitest-desu
 on: 
-  push:
   workflow_dispatch:
   
 jobs:
@@ -18,4 +17,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "this is pen3" >> $GITHUB_STEP_SUMMARY     
+
+  testjob4:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Check the [documentation](https://qiita.com/yu-ichiro/items/b50ceb0008edc3c0312e) for more info." >> $GITHUB_STEP_SUMMARY    
    
