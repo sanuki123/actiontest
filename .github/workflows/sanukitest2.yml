@@ -36,7 +36,6 @@ jobs:
           SUMMARY=$(echo "<details><summary>★開発者UNITテストのカバレッジを見る</summary>%0A" \
                    "$(awk '{gsub(/\|/, "%7C"); print}' sample_table.md | paste -sd '%0A' -)" \
                    "</details>")
-          
-          echo "SUMMARY<<EOF" >> $GITHUB_ENV
-          echo "$SUMMARY" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+
+          echo "SUMMARY=$SUMMARY" >> $GITHUB_STEP_SUMMARY
+
