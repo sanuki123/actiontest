@@ -32,10 +32,11 @@ jobs:
           | 佐藤花子 | 30   | デザイナー|
           | 田中一郎 | 28   | マーケティング|
           EOF
-      
-          echo "<details>" \
-               "<summary>★開発者UNITテストのカバレッジを見る</summary>" \
-               "$(cat sample_table.md)" \
-               "</details>" >> $GITHUB_STEP_SUMMARY
-  
-   
+
+          SUMMARY=$(echo "<details><summary>★開発者UNITテストのカバレッジを見る</summary>%0A" \
+                   "$(awk '{gsub(/\|/, "%7C"); print}' sample_table.md | paste -sd '%0A' -)" \
+                   "</details>")
+          
+          echo "SUMMARY<<EOF" >> $GITHUB_ENV
+          echo "$SUMMARY" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
