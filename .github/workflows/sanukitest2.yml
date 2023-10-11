@@ -15,7 +15,7 @@ jobs:
       - run: |
           echo "this is aaaa" > output.txt
           echo "this is bbbb" >> output.txt
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: myatf
           path: ./output.txt
