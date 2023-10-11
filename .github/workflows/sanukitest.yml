@@ -22,4 +22,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Check the [documentation](https://qiita.com/yu-ichiro/items/b50ceb0008edc3c0312e) for more info." >> $GITHUB_STEP_SUMMARY    
+
+  testjob5:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "this is aaaa" > output.txt
+          echo "this is bbbb" >> output.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: myatf
+          path: ./output.txt
    
