@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: sanukitest-desu
 on: 
   push:
   workflow_dispatch:
