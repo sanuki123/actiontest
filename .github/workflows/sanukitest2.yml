@@ -21,22 +21,22 @@ jobs:
           path: ./output.txt
   
   #ジョブサマリーに展開用のHTML付けて出力
-  testjob3:
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          cat <<EOF > sample_table.md
-          | 名前     | 年齢 | 職業     |
-          |----------|------|----------|
-          | 山田太郎 | 25   | エンジニア|
-          | 佐藤花子 | 30   | デザイナー|
-          | 田中一郎 | 28   | マーケティング|
-          EOF
-      
-          echo "<details>" \
-               "<summary>★開発者UNITテストのカバレッジを見る</summary>" \
-               "$(cat sample_table.md)" \
-               "</details>" >> $GITHUB_STEP_SUMMARY
+#  testjob3:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - run: |
+#          cat <<EOF > sample_table.md
+#          | 名前     | 年齢 | 職業     |
+#          |----------|------|----------|
+#          | 山田太郎 | 25   | エンジニア|
+#          | 佐藤花子 | 30   | デザイナー|
+#          | 田中一郎 | 28   | マーケティング|
+#          EOF
+#      
+#          echo "<details>" \
+#               "<summary>★開発者UNITテストのカバレッジを見る</summary>" \
+#               "$(cat sample_table.md)" \
+#               "</details>" >> $GITHUB_STEP_SUMMARY
   
   #ジョブサマリーに展開用のHTML付けて出力
   testjob4:
