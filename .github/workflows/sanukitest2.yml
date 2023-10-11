@@ -1,4 +1,4 @@
-name: sanukitest-desu
+name: sanukitest-desu2
 on: 
   workflow_dispatch:
   
