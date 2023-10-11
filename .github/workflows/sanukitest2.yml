@@ -60,6 +60,8 @@ jobs:
           | 田中一郎 | 28   | マーケティング|
           EOF
           
+          cat sample_table.md                                             >> $GITHUB_STEP_SUMMARY
+          
           echo "<details>"                                                >> $GITHUB_STEP_SUMMARY
           echo "<summary>★開発者UNITテストのカバレッジを見る</summary>"  >> $GITHUB_STEP_SUMMARY
           cat sample_table.md                                             >> $GITHUB_STEP_SUMMARY
