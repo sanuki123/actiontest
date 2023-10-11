@@ -17,5 +17,5 @@ jobs:
   testjob3:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "this is pen3"      
+      - run: echo "this is pen3" >> $GITHUB_STEP_SUMMARY     
    
