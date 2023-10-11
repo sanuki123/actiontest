@@ -43,10 +43,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo "| 名前     | 年齢 | 職業     |" >> $GITHUB_STEP_SUMMARY
-          echo "|----------|------|----------|" >> $GITHUB_STEP_SUMMARY
-          echo "| 山田太郎 | 25   | エンジニア|" >> $GITHUB_STEP_SUMMARY
-          echo "| 佐藤花子 | 30   | デザイナー|" >> $GITHUB_STEP_SUMMARY
-          echo "| 田中一郎 | 28   | マーケティング|" >> $GITHUB_STEP_SUMMARY
+          echo "| TH | TH |" >> $GITHUB_STEP_SUMMARY
+          echo "| ---- | ---- |" >> $GITHUB_STEP_SUMMARY
+          echo "| TD | TD |" >> $GITHUB_STEP_SUMMARY
+          echo "| TD | TD |" >> $GITHUB_STEP_SUMMARY
   
    
