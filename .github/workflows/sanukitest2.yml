@@ -48,14 +48,28 @@ jobs:
           | 佐藤花子 | 30   | デザイナー|
           EOF
 
-          echo "<details>"                                                >> $GITHUB_STEP_SUMMARY
-          echo "<summary>★開発者UNITテストのカバレッジを見る</summary>"  >> $GITHUB_STEP_SUMMARY
-          echo ""  >> $GITHUB_STEP_SUMMARY
-          echo ""  >> $GITHUB_STEP_SUMMARY
-          cat sample_table2.md                                             >> $GITHUB_STEP_SUMMARY
-          echo ""  >> $GITHUB_STEP_SUMMARY
-          echo ""  >> $GITHUB_STEP_SUMMARY
-          echo "</details>"                                               >> $GITHUB_STEP_SUMMARY
+
+          cat <<EOF >> $GITHUB_STEP_SUMMARY
+          <details>
+          <summary>★開発者UNITテストのカバレッジを見る</summary>
+
+
+          $(cat sample_table2.md)
+
+
+          </details>
+          EOF
+
+
+
+#          echo "<details>"                                                >> $GITHUB_STEP_SUMMARY
+#          echo "<summary>★開発者UNITテストのカバレッジを見る</summary>"  >> $GITHUB_STEP_SUMMARY
+#          echo ""  >> $GITHUB_STEP_SUMMARY
+#          echo ""  >> $GITHUB_STEP_SUMMARY
+#          cat sample_table2.md                                             >> $GITHUB_STEP_SUMMARY
+#          echo ""  >> $GITHUB_STEP_SUMMARY
+#          echo ""  >> $GITHUB_STEP_SUMMARY
+#          echo "</details>"                                               >> $GITHUB_STEP_SUMMARY
           
 #          echo "<details>" \
 #               "<summary>★開発者UNITテストのカバレッジを見る</summary>" \
