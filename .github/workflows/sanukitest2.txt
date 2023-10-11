@@ -1,0 +1,33 @@
+name: sanukitest-desu
+on: 
+  workflow_dispatch:
+  
+jobs:
+  testjob1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "this is pen1"
+      
+  #ファイルアップロード
+  testjob2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "this is aaaa" > output.txt
+          echo "this is bbbb" >> output.txt
+      - uses: actions/upload-artifact@v2
+        with:
+          name: myatf
+          path: ./output.txt
+  
+  #ジョブサマリーに展開用のHTML付けて出力
+  testjob3:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "<details>" \
+               "<summary>Show coverage summary</summary>" \
+               "aaaaa" \
+               "</details>" >> $GITHUB_STEP_SUMMARY
+  
+   
