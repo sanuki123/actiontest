@@ -41,7 +41,7 @@ jobs:
           echo "sanukisanuki"
           echo ""
           echo ""
-          echo "$sample_table.md"
+          echo "$(cat sample_table.md)"
 
           cat <<EOF > sample_table2.md
           | 名前     | 年齢 | 職業     |
