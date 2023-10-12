@@ -38,6 +38,9 @@ jobs:
           
           cat sample_table.md                                             >> $GITHUB_STEP_SUMMARY
 
+          echo "sanukisanuki"
+          echo ""
+          echo ""
           echo "$sample_table.md"
 
           cat <<EOF > sample_table2.md
