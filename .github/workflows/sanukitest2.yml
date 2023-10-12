@@ -38,6 +38,8 @@ jobs:
           
           cat sample_table.md                                             >> $GITHUB_STEP_SUMMARY
 
+          echo "$sample_table.md"
+
           cat <<EOF > sample_table2.md
           | 名前     | 年齢 | 職業     |
           |----------|------|----------|
